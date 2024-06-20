@@ -1,9 +1,6 @@
 class MotorizedVehicle {
 
-  color: string;
-
-  constructor(color: string) {
-    this.color = color;
+  constructor(public color: string) {
   }
 
   protected honk(): void {
@@ -15,6 +12,12 @@ const motorcycle = new MotorizedVehicle('orange');
 console.log(motorcycle.color);
 
 class Car extends MotorizedVehicle {
+
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+
+
   private drive(): void {
     console.log('vroom');
   }
@@ -25,5 +28,5 @@ class Car extends MotorizedVehicle {
   }
 }
 
-const car = new Car('black');
+const car = new Car(4, 'black');
 car.startDrivingProcess();
