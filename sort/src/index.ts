@@ -11,14 +11,11 @@ linkedList.add(-10);
 linkedList.add(-3);
 linkedList.add(4);
 
-const numSorter = new Sorter(numbersCollection);
-numSorter.sort();
-console.log(numSorter.collection);
+numbersCollection.sort();
+console.log(numbersCollection.data);
 
-const charSorter = new Sorter(charactersCollection);
-charSorter.sort();
-console.log(charSorter.collection);
+charactersCollection.sort();
+console.log(charactersCollection.data);
 
-const linkedListSorter = new Sorter(linkedList);
-linkedListSorter.sort();
+linkedList.sort();
 linkedList.print();
